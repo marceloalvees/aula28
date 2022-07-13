@@ -1,0 +1,93 @@
+﻿@model List<Person>
+
+@{
+	ViewData["Title"] = "App Escola";
+}
+<div class="container">
+	<div class="row">
+		<div class="col-auto">
+			<h1>🎓</h1>
+		</div>
+		<div class="col"><h1> APP ESCOLA </h1></div>
+	</div>
+</div>
+
+<div class="container">
+	<h1>#1 Turma</h1>
+	<div class="row">
+		<div class="col">
+			<input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="Digite o nome do aluno:">
+		</div>
+		<div class="col-auto">
+			<button type="submit" class="btn btn-primary btn-lg ms-2">&#128269;</button>
+		</div>
+	</div>
+</div>
+
+
+@{
+	
+}
+
+<!--
+	string[] Todos = { "Tarefa 1", "Tarefa 2" };
+
+	foreach (string Todo in Todos)
+	{
+		<li class="list-group-item">
+			<div class="row">
+				<div class="col-auto">
+					<input class="form-check-input me-2"
+						   type="checkbox">
+				</div>
+				<div class="col">
+					Todo
+				</div>
+				<div class="col-auto">
+					<button class="btn btn-sm btn-danger">
+						Delete
+					</button>
+				</div>
+			</div>
+		</li>
+	}
+}
+	</ul>
+</div>
+
+foreach(var people in Model)
+                {
+                  <li class="list-group-item px-2 py-3">Nome: people.Name, Idade: people.Age</li>  
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+-->
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Nome</th>
+			<th scope="col">Sobrenome</th>
+			<th scope="col">Status</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		
+		
+			@foreach(var people in Model){
+				<tr>
+			<th scope="row">@people.Id</th>
+			<td>@people.Name </td>
+			<td>@people.Sobrenome</td>
+			<td>@people.Status </td>
+		</tr>
+			}
+		
+	</tbody>
+</table>
