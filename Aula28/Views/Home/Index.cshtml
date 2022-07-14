@@ -1,17 +1,18 @@
-﻿@model List<Person>
+﻿@model List<Boletim>
 
-@{
+
+
+	@{
 	ViewData["Title"] = "App Escola";
 }
 <div class="container">
 	<div class="row">
 		<div class="col-auto">
-			<h1>🎓</h1>
+			<h1>:chapéu_de_formando:</h1>
 		</div>
 		<div class="col"><h1> APP ESCOLA </h1></div>
 	</div>
 </div>
-
 <div class="container m-3">
 	<h1>#1 Turma</h1>
 	<div class="row">
@@ -23,10 +24,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-
 <table class="table">
 	<thead>
 		<tr>
@@ -36,42 +33,148 @@
 			<th scope="col">Status</th>
 		</tr>
 	</thead>
-	
 	<tbody>
-		
-		
-			@foreach(var people in Model){
-				
-				@if(people.Status == "Reprovado"){
-						<tr class="table-danger">
-							<th scope="row">@people.Id</th>
-							<td>@people.Name </td>
-							<td>@people.Sobrenome</td>
-							<td>@people.Status </td>
-						</tr>
-				} else if(people.Status == "Recuperação"){
-							<tr class="table-warning">
-								<th scope="row">@people.Id</th>
-								<td>@people.Name </td>
-								<td>@people.Sobrenome</td>
-								<td>@people.Status </td>
-							</tr>
-					}
-					else
-					{
-								<tr>
-								<th scope="row">@people.Id</th>
-								<td>@people.Name </td>
-								<td>@people.Sobrenome</td>
-								<td>@people.Status </td>
-								</tr>
-					}
-
-				
-				
-
-		
+		@foreach (var people in Model)
+		{
+			@if (people.Status == "Reprovado")
+			{
+				<tr class="table-danger">
+					<th scope="row">@people.Id</th>
+					<td>@people.Name </td>
+					<td>@people.Sobrenome</td>
+					<td>@people.Status </td>
+				</tr>
 			}
-		
+			else if (people.Status == "Recuperação")
+			{
+				<tr class="table-warning">
+					<th scope="row">@people.Id</th>
+					<td>@people.Name </td>
+					<td>@people.Sobrenome</td>
+					<td>@people.Status </td>
+				</tr>
+			}
+			else
+			{
+				<tr>
+					<th scope="row">@people.Id</th>
+					<td>@people.Name </td>
+					<td>@people.Sobrenome</td>
+					<td>@people.Status </td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+
+
+
+<!--Iniciei a segunda parte da atividade, o título ja está ok, porém não acho que ela será chamada aqui
+	nesse Index
+-->
+@{
+	ViewData["Title"] = "App Escola";
+}
+
+<div class="container">
+	<div class="row">
+		<h1>#1 Willian Sant Anna</h1>
+	</div>
+</div>
+<div class="container">
+	<h2>31/08/90 (32 anos)</h2>
+</div>
+<div class="container">
+	<h2>Rua Tribal,68 Recreio dos Bandeirantes, Rio de Janeiro</h2>
+</div>
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Matéria</th>
+			<th scope="col">1</th>
+			<th scope="col">2</th>
+			<th scope="col">3</th>
+			<th scope="col">4</th>
+			<th scope="col">Status</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var alunoBoletim in Model)
+		{
+			<tr>
+				<th scope="row">@alunoBoletim.Materia</th>
+				@if (alunoBoletim.Nota1 < 6)
+				{
+					<td class="table-danger">@alunoBoletim.Nota1</td>
+				}
+				else if (alunoBoletim.Nota1 < 7)
+				{
+					<td class="table-warning">@alunoBoletim.Nota1</td>
+				}
+				else
+				{
+					<td class="table-success">@alunoBoletim.Nota1</td>
+				}
+
+				@if (alunoBoletim.Nota2 < 6)
+				{
+					<td class="table-danger">@alunoBoletim.Nota2</td>
+				}
+				else if (alunoBoletim.Nota2 < 7)
+				{
+					<td class="table-warning">@alunoBoletim.Nota2</td>
+				}
+				else
+				{
+					<td class="table-success">@alunoBoletim.Nota2</td>
+				}
+
+				@if (alunoBoletim.Nota3 < 6)
+				{
+					<td class="table-danger">@alunoBoletim.Nota3</td>
+				}
+				else if (alunoBoletim.Nota3 < 7)
+				{
+					<td class="table-warning">@alunoBoletim.Nota3</td>
+				}
+				else
+				{
+					<td class="table-success">@alunoBoletim.Nota3</td>
+				}
+
+				@if (alunoBoletim.Nota4 < 6)
+				{
+					<td class="table-danger">@alunoBoletim.Nota4</td>
+				}
+				else if (alunoBoletim.Nota4 < 7)
+				{
+					<td class="table-warning">@alunoBoletim.Nota4</td>
+				}
+				else
+				{
+					<td class="table-success">@alunoBoletim.Nota4</td>
+				}
+
+				@if (alunoBoletim.Status == "Reprovado")
+				{
+					<td class="table-danger"> @alunoBoletim.Status</td>
+				}
+				else if (alunoBoletim.Status == "Recuperação")
+				{
+					<td class="table-warning"> @alunoBoletim.Status</td>
+				}
+				else
+				{
+					<td class="table-success"> @alunoBoletim.Status</td>
+				}
+			</tr>
+		}
+
+	}
 	</tbody>
 </table>

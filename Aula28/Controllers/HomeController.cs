@@ -15,6 +15,51 @@ namespace Aula28.Controllers
 
         public IActionResult Index()
         {
+            // Fiz a lista do Boletim, mas não entendi como fazer a chamada dela
+            List<Boletim> alunoBoletim = new List<Boletim>();
+
+            alunoBoletim.Add(new Boletim()
+            {
+                Materia = "Português",
+                Nota1 = 5,
+                Nota2 = 6.5,
+                Nota3 = 6.5,
+                //Deixar um valor nulo para nota 4
+                Status = "Reprovado"
+            });
+
+            alunoBoletim.Add(new Boletim()
+            {
+                Materia = "Matemática",
+                Nota1 = 10,
+                Nota2 = 8,
+                Nota3 = 8,
+                Nota4 = 8,
+                Status = "Aprovado"
+            });
+
+            alunoBoletim.Add(new Boletim()
+            {
+                Materia = "Ciências",
+                Nota1 = 6,
+                Nota2 = 7.5,
+                Nota3 = 8,
+                Nota4 = 8,
+                Status = "Aprovado"
+            });
+
+            alunoBoletim.Add(new Boletim()
+            {
+                Materia = "História",
+                Nota1 = 8,
+                Nota2 = 9,
+                Nota3 = 10,
+                Nota4 = 7.5,
+                Status = "Aprovado"
+            });
+
+            return View(alunoBoletim);
+/*
             List<Person> people = new List<Person>();
 
             people.Add(new Person()
@@ -24,7 +69,7 @@ namespace Aula28.Controllers
                 Sobrenome = "Sant Anna",
                 Status = "Reprovado"
 
-            }) ;
+            });
 
             people.Add(new Person()
             {
@@ -52,10 +97,8 @@ namespace Aula28.Controllers
                 Status = "Recuperação"
 
             });
-
-
-
             return View(people);
+*/
         }
 
         public IActionResult Privacy()

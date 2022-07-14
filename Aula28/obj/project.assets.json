@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\marceloa\\.nuget\\packages\\": {}
+    "C:\\Users\\laiss\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marceloa\\Desktop\\DH\\Aula28\\Aula28\\Aula28.csproj",
+      "projectUniqueName": "C:\\Users\\laiss\\Documents\\Aulas\\5. .Net framework\\Aula28 13_07\\Aula28\\Aula28.csproj",
       "projectName": "Aula28",
-      "projectPath": "C:\\Users\\marceloa\\Desktop\\DH\\Aula28\\Aula28\\Aula28.csproj",
-      "packagesPath": "C:\\Users\\marceloa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marceloa\\Desktop\\DH\\Aula28\\Aula28\\obj\\",
+      "projectPath": "C:\\Users\\laiss\\Documents\\Aulas\\5. .Net framework\\Aula28 13_07\\Aula28\\Aula28.csproj",
+      "packagesPath": "C:\\Users\\laiss\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laiss\\Documents\\Aulas\\5. .Net framework\\Aula28 13_07\\Aula28\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marceloa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\laiss\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
